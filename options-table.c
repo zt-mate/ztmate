@@ -896,19 +896,19 @@ const struct options_table_entry options_table[] = {
 	},
 
 #ifdef TMATE
-	{ .name = "tmate-identity",
+	{ .name = "ztmate-identity",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-server-host",
+	{ .name = "ztmate-server-host",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = "ssh.tmate.io"
 	},
 
-	{ .name = "tmate-server-port",
+	{ .name = "ztmate-server-port",
 	  .type = OPTIONS_TABLE_NUMBER,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .minimum = 1,
@@ -916,31 +916,31 @@ const struct options_table_entry options_table[] = {
 	  .default_num = 22
 	},
 
-	{ .name = "tmate-server-dsa-fingerprint",
+	{ .name = "ztmate-server-dsa-fingerprint",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = "obsolete"
 	},
 
-	{ .name = "tmate-server-rsa-fingerprint",
+	{ .name = "ztmate-server-rsa-fingerprint",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = "SHA256:Hthk2T/M/Ivqfk1YYUn5ijC2Att3+UPzD7Rn72P5VWs"
 	},
 
-	{ .name = "tmate-server-ecdsa-fingerprint",
+	{ .name = "ztmate-server-ecdsa-fingerprint",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = "SHA256:8GmKHYHEJ6n0TEdciHeEGkKOigQfCFuBULdt6vZIhDc"
 	},
 
-	{ .name = "tmate-server-ed25519-fingerprint",
+	{ .name = "ztmate-server-ed25519-fingerprint",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = "SHA256:jfttvoypkHiQYUqUCwKeqd9d1fJj/ZiQlFOHVl6E9sI"
 	},
 
-	{ .name = "tmate-display-time",
+	{ .name = "ztmate-display-time",
 	  .type = OPTIONS_TABLE_NUMBER,
 	  .scope = OPTIONS_TABLE_SESSION,
 	  .minimum = 1,
@@ -948,49 +948,49 @@ const struct options_table_entry options_table[] = {
 	  .default_num = 15000
 	},
 
-	{ .name = "tmate-webhook-userdata",
+	{ .name = "ztmate-webhook-userdata",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-webhook-url",
+	{ .name = "ztmate-webhook-url",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-api-key",
+	{ .name = "ztmate-api-key",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-session-name",
+	{ .name = "ztmate-session-name",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-session-name-ro",
+	{ .name = "ztmate-session-name-ro",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-authorized-keys",
+	{ .name = "ztmate-authorized-keys",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-set",
+	{ .name = "ztmate-set",
 	  .type = OPTIONS_TABLE_STRING,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .default_str = ""
 	},
 
-	{ .name = "tmate-foreground-restart",
+	{ .name = "ztmate-foreground-restart",
 	  .type = OPTIONS_TABLE_NUMBER,
 	  .scope = OPTIONS_TABLE_SERVER,
 	  .minimum = 0,

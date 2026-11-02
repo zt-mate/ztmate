@@ -141,7 +141,7 @@ tty_create_log(void)
 {
 	char	name[64];
 
-	xsnprintf(name, sizeof name, "tmate-out-%ld.log", (long)getpid());
+	xsnprintf(name, sizeof name, "ztmate-out-%ld.log", (long)getpid());
 
 	tty_log_fd = open(name, O_WRONLY|O_CREAT|O_TRUNC, 0644);
 	if (tty_log_fd != -1 && fcntl(tty_log_fd, F_SETFD, FD_CLOEXEC) == -1)

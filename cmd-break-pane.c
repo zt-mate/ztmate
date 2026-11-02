@@ -48,7 +48,7 @@ enum cmd_retval
 cmd_break_pane_exec(struct cmd *self, struct cmd_q *cmdq)
 {
 #ifdef TMATE
-	cmdq_error(cmdq, "break pane is not supported with tmate");
+	cmdq_error(cmdq, "break pane is not supported with ztmate");
 	return (CMD_RETURN_ERROR);
 #else
 	struct args		*args = self->args;

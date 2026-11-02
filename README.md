@@ -1,19 +1,22 @@
-tmate
-=====
-
-> [!IMPORTANT]
-> The public tmate servers (`ssh.tmate.io`) were shut down in July 2025, so tmate
-> no longer works out of the box. A rewrite of the server in Rust and the return
-> of the hosted service are tracked in [#336](https://github.com/tmate-io/tmate/issues/336).
-> Until then, you can run your own [tmate-ssh-server](https://github.com/tmate-io/tmate-ssh-server)
-> and point tmate at it with the `tmate-server-*` options.
+ztmate
+======
 
 What is it?
 -----------
 
-Tmate is a fork of tmux. It provides an instant pairing solution.
+`ztmate` is a Zig-refactored fork of `tmate` / `tmux` providing instant terminal pairing and sharing.
+
+Build & Test
+------------
+
+```bash
+zig build
+zig build test --summary all
+```
+
+The built binary is located at `./zig-out/bin/ztmate`.
 
 License
 -------
 
-tmate is built on top of tmux. tmux and tmate are BSD-licensed.
+ztmate is built on top of tmate and tmux, and is BSD-licensed.

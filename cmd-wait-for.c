@@ -193,7 +193,7 @@ cmd_wait_for_wait(struct cmd_q *cmdq, const char *name,
 	struct client	*c = cmdq->client;
 
 #ifdef TMATE
-	if (!strcmp(name, "tmate-ready") && tmate_session.tmate_env_ready)
+	if (!strcmp(name, "ztmate-ready") && tmate_session.tmate_env_ready)
 		return (CMD_RETURN_NORMAL);
 #endif
 

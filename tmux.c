@@ -48,7 +48,7 @@ __dead void	 usage(void);
 static char	*make_label(const char *);
 
 #ifndef HAVE___PROGNAME
-char      *__progname = (char *) "tmate";
+char      *__progname = (char *) "ztmate";
 #endif
 
 #ifdef TMATE
@@ -67,7 +67,7 @@ usage(void)
 	    " -k <key>     specify an api-key, necessary for using named sessions on tmate.io\n"
 	    " -F           set the foreground mode, useful for setting remote access\n"
 	    " -f <path>    set the config file path\n"
-	    " -S <path>    set the socket path, useful to issue commands to a running tmate instance\n"
+	    " -S <path>    set the socket path, useful to issue commands to a running ztmate instance\n"
 	    " -a <path>    limit access to ssh public keys listed in provided file\n"
 	    " -v           set verbosity (can be repeated)\n"
 	    " -V           print version\n"
@@ -138,9 +138,9 @@ make_label(const char *label)
 	uid = getuid();
 
 	if ((s = getenv("TMUX_TMPDIR")) != NULL && *s != '\0')
-		xasprintf(&base, "%s/tmate-%u", s, uid);
+		xasprintf(&base, "%s/ztmate-%u", s, uid);
 	else
-		xasprintf(&base, "%s/tmate-%u", _PATH_TMP, uid);
+		xasprintf(&base, "%s/ztmate-%u", _PATH_TMP, uid);
 
 	if (mkdir(base, S_IRWXU) != 0 && errno != EEXIST)
 		goto fail;
@@ -227,10 +227,10 @@ void tmate_load_cli_options(void)
 		val = NULL; \
 	} \
 })
-	SET_OPT("tmate-api-key",         api_key);
-	SET_OPT("tmate-session-name",    session_name);
-	SET_OPT("tmate-session-name-ro", session_name_ro);
-	SET_OPT("tmate-authorized-keys", authorized_keys);
+	SET_OPT("ztmate-api-key",         api_key);
+	SET_OPT("ztmate-session-name",    session_name);
+	SET_OPT("ztmate-session-name-ro", session_name_ro);
+	SET_OPT("ztmate-authorized-keys", authorized_keys);
 #undef SET_OPT
 }
 #endif

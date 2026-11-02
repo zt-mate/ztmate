@@ -60,7 +60,7 @@ enum cmd_retval
 cmd_move_window_exec(struct cmd *self, struct cmd_q *cmdq)
 {
 #ifdef TMATE
-	cmdq_error(cmdq, "move window is not supported with tmate");
+	cmdq_error(cmdq, "move window is not supported with ztmate");
 	return (CMD_RETURN_ERROR);
 #else
 	struct args	*args = self->args;

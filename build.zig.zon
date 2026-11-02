@@ -1,0 +1,14 @@
+.{
+    .name = .ztmate,
+    .version = "2.4.0",
+    .fingerprint = 0xe1fb6ee7885dff4f,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "include",
+        "compat",
+    },
+}

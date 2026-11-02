@@ -71,7 +71,7 @@ start_cfg(void)
 		cfg_add_cause("%s: %s", TMUX_CONF, strerror(errno));
 
 	if (cfg_file == NULL && (home = find_home()) != NULL) {
-		xasprintf(&cfg_file, "%s/.tmate.conf", home);
+		xasprintf(&cfg_file, "%s/.ztmate.conf", home);
 		if (access(cfg_file, R_OK) != 0 && errno == ENOENT) {
 			free(cfg_file);
 			cfg_file = NULL;

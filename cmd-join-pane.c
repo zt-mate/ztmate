@@ -70,7 +70,7 @@ enum cmd_retval
 join_pane(struct cmd *self, struct cmd_q *cmdq, int not_same_window)
 {
 #ifdef TMATE
-	cmdq_error(cmdq, "join pane is not supported with tmate");
+	cmdq_error(cmdq, "join pane is not supported with ztmate");
 	return (CMD_RETURN_ERROR);
 #else
 	struct args		*args = self->args;

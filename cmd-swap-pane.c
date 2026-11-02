@@ -71,7 +71,7 @@ cmd_swap_pane_exec(struct cmd *self, struct cmd_q *cmdq)
 
 #ifdef TMATE
 	if (src_w != dst_w) {
-		cmdq_error(cmdq, "swap pane on different window is not supported with tmate");
+		cmdq_error(cmdq, "swap pane on different window is not supported with ztmate");
 		return (CMD_RETURN_ERROR);
 	}
 #endif

@@ -3,35 +3,26 @@ on:
   push:
     branches:
       - '*'
-    paths:
-      - '**.c'
-      - '**.h'
-      - 'compat/*'
-      - '.github/workflows/Ubuntu.yml'
   pull_request:
     branches:
       - '*'
-    paths:
-      - '**.c'
-      - '**.h'
-      - 'compat/*'
-      - '.github/workflows/Ubuntu.yml'
-
-
 
 jobs:
   Ubuntu:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: |
-        sudo apt-get install -y  build-essential automake libtool libevent-dev libncurses5-dev libmsgpack-dev libssh-dev pkg-config
-        autoupdate
-        ACLOCAL_PATH=/usr/share/aclocal ./autogen.sh
-        ./configure
-        make
-        sudo make install
-
-
-
-
+      - uses: actions/checkout@v4
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libevent-dev libncurses-dev libssh-dev pkg-config
+      - name: Setup Zig
+        uses: mlugg/setup-zig@v2
+        with:
+          version: 0.16.0
+      - name: Build ztmate
+        run: zig build
+      - name: Run unit tests
+        run: zig build test --summary all
+      - name: Verify binary
+        run: ./zig-out/bin/ztmate -V

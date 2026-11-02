@@ -82,7 +82,7 @@ log_open(const char *name)
 	if (log_level == 0)
 		return;
 
-	xasprintf(&path, "tmate-%s-%ld.log", name, (long)getpid());
+	xasprintf(&path, "ztmate-%s-%ld.log", name, (long)getpid());
 	FILE *f = fopen(path, "w");
 	free(path);
 	if (f)

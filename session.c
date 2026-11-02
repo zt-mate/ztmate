@@ -112,7 +112,7 @@ session_create(const char *name, int argc, char **argv, const char *path,
 
 #ifdef TMATE
 	if (next_session_id != 0) {
-		xasprintf(cause, "multi sessions is not supported with tmate");
+		xasprintf(cause, "multi sessions is not supported with ztmate");
 		return NULL;
 	}
 #endif
@@ -209,7 +209,7 @@ session_free(__unused int fd, __unused short events, void *arg)
 
 static void maybe_restart_session(void)
 {
-	int fg_restart = options_get_number(global_options, "tmate-foreground-restart");
+	int fg_restart = options_get_number(global_options, "ztmate-foreground-restart");
 	if (!fg_restart)
 		return;
 

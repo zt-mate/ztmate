@@ -17,6 +17,7 @@ Makefile
 Makefile.in
 configure
 tmate
+ztmate
 cscope.*
 ctags
 *.log
@@ -26,3 +27,5 @@ ext/
 libssh-*/
 msgpack-*/
 releases/
+.zig-cache/
+zig-out/

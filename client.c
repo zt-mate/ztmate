@@ -361,8 +361,8 @@ client_main(struct event_base *base, int argc, char **argv, int flags,
 #ifdef TMATE
 			if (errno == ENOENT)
 				fprintf(stderr, "You must specify a socket name with -S. For example: \n"
-					        "  tmate -S /tmp/tmate.sock new-session -d\n"
-					        "  tmate -S /tmp/tmate.sock wait tmate-ready\n");
+					        "  ztmate -S /tmp/ztmate.sock new-session -d\n"
+					        "  ztmate -S /tmp/ztmate.sock wait ztmate-ready\n");
 			else
 #endif
 			fprintf(stderr, "error connecting to %s (%s)\n",
